@@ -20,7 +20,7 @@
 1. 建立 MySQL 数据库， 并根据建表语句建表；
 2. 修改 pipelines.py 中数据库的相关配置参数；
 3. 修改csdndemo.py 中的 uid; 即指定用户的 ID；
-4. 使用 scrapy crawl csdndemo -s -LOGLEVEL=INFO 启动项目；(python要先按照 scrapy 库)；
+4. 使用 scrapy crawl csdndemo -s -LOGLEVEL=INFO 启动项目；(python要先安装 scrapy 库)；
 
 
 
