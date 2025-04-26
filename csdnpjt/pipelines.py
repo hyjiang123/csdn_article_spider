@@ -11,7 +11,8 @@ from numpy import histogram
 
 class CsdnpjtPipeline:
     def __init__(self):
-        self.conn = pymysql.connect(host="106.52.42.140",user="root",password="hgj1097229155",db="blog",port=3306)
+        # 下面的参数需要替换为实际数据库的相关参数
+        self.conn = pymysql.connect(host="ip",user="username",password="password",db="db_name",port=port)
 
     def process_item(self, item, spider):
         for j in range(0, len(item["name"])):
