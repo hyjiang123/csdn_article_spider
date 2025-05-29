@@ -2,12 +2,8 @@ from flask import Flask, request, jsonify
 
 from searchcsdnspider import CSDN
 
+from hotcsdnspider import CSDNhot
 app = Flask(__name__)
-
-scraped_data = []
-
-# def start_spider(keyword):
-
 
 @app.route('/search', methods=['GET'])
 def search():
@@ -16,6 +12,14 @@ def search():
     page = request.args.get('page')
 
     result = CSDN(search_keyword=keyword, search_page=page).main()
+
+    return jsonify(result)
+
+
+@app.route('/hotArticle', methods=['GET'])
+def hotArticle():
+
+    result = CSDNhot().main()
 
     return jsonify(result)
 
